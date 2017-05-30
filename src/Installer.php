@@ -24,7 +24,7 @@ class Installer
         $io = $event->getIO();
 
         self::$values['vendor'] = self::ask(
-            $io, 'Vendor', 'MyVendor'
+            $io, 'Vendor', 'MinhD'
         );
 
         self::$values['package'] = self::ask(
@@ -157,6 +157,11 @@ class Installer
      */
     private static function camel2dashed($name)
     {
+        // very specific!
+        if ($name == "MinhD") {
+            return "minhd";
+        }
+
         return strtolower(preg_replace('/([a-zA-Z])(?=[A-Z])/', '$1-', $name));
     }
 
