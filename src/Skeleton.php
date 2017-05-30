@@ -9,6 +9,5 @@ class __Package__
      */
     public function __construct()
     {
-
     }
 }
