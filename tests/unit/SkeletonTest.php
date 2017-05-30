@@ -2,9 +2,7 @@
 
 namespace __Vendor__\__Package__;
 
-use PHPUnit_Framework_TestCase;
-
-class __Package__UnitTest extends TestCase
+class __Package__UnitTest extends \PHPUnit_Framework_TestCase
 {
     /** @test */
     public function it_should_create_new_instance()
