@@ -117,13 +117,14 @@ class Installer
             file_put_contents($file, $contents);
         }
 
-        // $skeletonFile = __DIR__ . '/Skeleton.php';
-        // copy($skeletonFile, $root."/src/".self::$values['package'].".php");
-        // unlink($skeletonFile);
+        $skeletonFile = __DIR__ . '/Skeleton.php';
+        copy($skeletonFile, $root."/src/".self::$values['package'].".php");
+        unlink($skeletonFile);
 
-        // $skeletonTest = $root."/tests/SkeletonTest.php";
-        // copy($skeletonTest, $root."/tests/".self::$values['package']."Test.php");
-        // unlink($skeletonTest);
+        // skeleton Unit Test
+        $skeletonTest = $root."/tests/unit/SkeletonTest.php";
+        copy($skeletonTest, $root."/tests/unit/".self::$values['package']."Test.php");
+        unlink($skeletonTest);
 
         // remove Installer
         unlink(__FILE__);
